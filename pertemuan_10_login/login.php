@@ -42,6 +42,13 @@
                 </div>
             <?php endif ?>
         <?php endif ?>
+        <?php if (isset($_GET['pesan'])) : ?>
+            <?php if ($_GET['pesan'] == 'berhasil_register') : ?>
+                <div class="alert alert-success" role="alert">
+                    Pendaftaran Akun baru Berhasil
+                </div>
+            <?php endif ?>
+        <?php endif ?>
         <h2 class="h3 mb-3 font-weight-normal">Login</h2>
         <label for="inputUsername" class="sr-only">Username</label>
         <input type="text" name="username" id="inputUsername" class="form-control mb-1" placeholder="Username" required="" autofocus="">
@@ -53,7 +60,9 @@
             </label>
         </div>
         <button class="btn btn-sm btn-primary btn-block mb-3" type="submit" name="login">Sign in</button>
+        <a href="registrasi.php">Register</a>
     </form>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>

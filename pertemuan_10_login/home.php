@@ -5,8 +5,8 @@ if (!isset($_SESSION['user'])) {
 }
 
 if (isset($_GET['login'])) {
-    if ($_GET['login']='berhasil') { 
-    echo '<div class="alert alert-success" role="alert">
+    if ($_GET['login'] = 'berhasil') {
+        echo '<div class="alert alert-success" role="alert">
         Anda Berhasil Login!
     </div>';
     }
