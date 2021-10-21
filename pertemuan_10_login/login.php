@@ -56,7 +56,7 @@
         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
         <div class="checkbox mb-3">
             <label>
-                <input type="checkbox" value="remember-me"> Remember me
+                <input type="checkbox" value="true" name="setcookie"> Remember me
             </label>
         </div>
         <button class="btn btn-sm btn-primary btn-block mb-3" type="submit" name="login">Sign in</button>

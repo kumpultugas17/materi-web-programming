@@ -1,5 +1,18 @@
 <?php
 session_start();
+include 'config.php';
+
+if (isset($_COOKIE['username'])) {
+    $sql = $conn->query("SELECT * FROM login");
+    $row = mysqli_fetch_assoc($sql);
+    $username = $row['username'];
+    if (password_verify($username, $_COOKIE['username'])) {
+        $_SESSION['user'] = $username;
+        $_SESSION['name'] = $row['nama'];
+        $_SESSION['level'] = $row['level'];
+    }
+}
+
 if (!isset($_SESSION['user'])) {
     header('location:login.php');
 }
