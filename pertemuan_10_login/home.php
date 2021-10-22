@@ -27,6 +27,6 @@ if (isset($_GET['login'])) {
 ?>
 <h1>Halaman Home</h1><br>
 <h3>Nama : <?= $_SESSION['name'] ?></h3><br>
-<h3>Level : <?= $_SESSION['level'] ?></h3><br>
+<h3>Level : <?= $level = $_SESSION['level'] == 1 ? 'Admin' : 'Anggota'; ?></h3><br>
 
 <a href="logout.php">Logout</a>
